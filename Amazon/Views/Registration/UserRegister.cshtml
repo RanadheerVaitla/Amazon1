@@ -1,0 +1,41 @@
+﻿@model Amazon.Models.Registration
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UserRegister</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("AddUser", "Registration"))
+        {
+            <div>
+                @Html.LabelFor(R => R.Name)
+                @Html.TextBoxFor(R => R.Name)
+            </div>
+            <div>
+                @Html.LabelFor(R => R.Password)
+                @Html.TextBoxFor(R => R.Password)
+            </div>
+            <div>
+                @Html.LabelFor(R => R.ConfirmPassword)
+                @Html.TextBoxFor(R => R.ConfirmPassword)
+            </div>
+            <div>
+                @Html.LabelFor(R => R.Email)
+                @Html.TextBoxFor(R => R.Email)
+            </div>
+            <div>
+                <input type="submit" value="SUBMIT" />
+                <input type="reset" value="RESET" />
+            </div>
+        }
+    </div>
+</body>
+</html>
